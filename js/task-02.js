@@ -7,12 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 
-let ulList = document.getElementById("ingredients");
-const foodIngredients = ingredients.forEach(ingredient => {
-  let items = document.createElement("li");
-  items.innerHTML = ingredient;
-  ulList.append(items);
-  parent.append[...items]
-});
+const listEl = document.querySelector('#ingredients');
 
-console.log(foodIngredients);
+const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
+
+listEl.innerHTML = list;
+
+console.log(listEl);

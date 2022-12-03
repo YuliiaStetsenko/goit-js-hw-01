@@ -22,13 +22,14 @@ const createGalleryItem = ({ url, alt } = {}) => {
 const galleryListElements = images.map(createGalleryItem).join("");
 galleryEl.insertAdjacentHTML("beforeend", galleryListElements);
 
-galleryEl.style.cssText = `display: flex;
-  align-items: center;
+galleryEl.style.cssText = `
+display: flex;
   justify-content: center;
-  column-gap:
+  column-gap: 30px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+   list-style: none;
   
   `;
 
